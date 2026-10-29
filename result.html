@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Result — SIGNAL</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-result">
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">SIGNAL<span class="dot"></span></a>
+  <div class="topbar-right">
+    <button class="btn btn-ghost" id="tableBtn" type="button">A–Z Codes</button>
+    <span class="brand-meta">04 — Result</span>
+  </div>
+</header>
+
+<main class="result-main">
+  <p class="eyebrow" id="resultEyebrow">Session complete</p>
+
+  <div class="result-hero">
+    <div class="result-stat">
+      <b id="score">0 / 4</b>
+      <span>Phrases</span>
+    </div>
+    <div class="result-stat">
+      <b id="time">0:00</b>
+      <span>Time</span>
+    </div>
+    <div class="result-stat">
+      <b id="hints">0</b>
+      <span>Hints</span>
+    </div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn-primary btn-lg" id="again" type="button">Play again</button>
+    <button class="btn btn-ghost" id="staffReset" type="button">Staff reset</button>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rain.js"></script>
+<script src="js/conversion.js"></script>
+<script src="js/idle.js"></script>
+<script src="js/result.js"></script>
+</body>
+</html>

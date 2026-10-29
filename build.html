@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build — SIGNAL</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-build">
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">SIGNAL<span class="dot"></span></a>
+  <div class="topbar-right">
+    <button class="btn btn-ghost" id="tableBtn" type="button">A–Z Codes</button>
+    <span class="brand-meta">03 — Build</span>
+  </div>
+</header>
+
+<main class="build-main">
+  <div class="build-head">
+    <div class="progress-wrap">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-label"><b id="progressNow">0</b> / <span id="progressTotal">4</span> phrases</span>
+    </div>
+    <div class="stats">
+      <span class="timer-badge" id="timerBadge">⏱ <b id="phraseTimer">0:45</b></span>
+      <span>Hints <b id="hints">0</b></span>
+      <span>Misses <b id="misses">0</b></span>
+    </div>
+  </div>
+
+  <div class="build-body">
+    <p class="phrase" id="phrase" aria-live="polite">AI</p>
+    <p class="target-codes" id="targetCodes" hidden></p>
+    <div class="slots" id="slots"></div>
+    <div class="mini-key" id="miniKey" aria-hidden="true"></div>
+    <div class="tray" id="tray"></div>
+    <div class="draw-area" id="drawArea" hidden></div>
+    <p class="feedback" id="feedback" aria-live="polite"></p>
+    <div class="actions">
+      <button class="btn btn-primary btn-lg" id="check" type="button">Check</button>
+      <button class="btn btn-secondary btn-lg" id="hintBtn" type="button">Hint</button>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="confetti" aria-hidden="true"></div>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rain.js"></script>
+<script src="js/conversion.js"></script>
+<script src="js/idle.js"></script>
+<script src="js/build.js"></script>
+</body>
+</html>

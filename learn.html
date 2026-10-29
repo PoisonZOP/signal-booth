@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learn — SIGNAL</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-learn">
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">SIGNAL<span class="dot"></span></a>
+  <div class="topbar-right">
+    <button class="btn btn-ghost" id="tableBtn" type="button">A–Z Codes</button>
+    <span class="brand-meta">01 — Learn</span>
+  </div>
+</header>
+
+<main class="learn-main">
+  <div class="page-head">
+    <a class="btn btn-ghost" href="index.html">← Back</a>
+    <span class="step">Step 1 / 3</span>
+  </div>
+
+  <div class="learn-grid">
+    <section class="card">
+      <div class="bits" id="bits" aria-label="Four bit toggles"></div>
+      <p class="calc" id="calc" aria-live="polite">0×8 + 1×4 + 0×2 + 1×1 = 5</p>
+      <p class="hintline">Tap the bits to change the number.</p>
+    </section>
+
+    <section class="card">
+      <ol class="teach">
+        <li>
+          <strong>A bit is 0 or 1.</strong>
+          <span>One switch. On or off.</span>
+        </li>
+        <li>
+          <strong>Each place doubles.</strong>
+          <span>8 · 4 · 2 · 1</span>
+        </li>
+        <li>
+          <strong>Letters are numbers.</strong>
+          <span class="mono">A = 01000001</span>
+          <span><em>Real ASCII, 8 bits.</em></span>
+        </li>
+      </ol>
+      <p class="fineprint" style="margin-bottom:20px">The game uses a 5-bit classroom code so you can build words fast.</p>
+      <a class="btn btn-primary btn-lg" href="decode.html">Next: Decode →</a>
+    </section>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rain.js"></script>
+<script src="js/conversion.js"></script>
+<script src="js/idle.js"></script>
+<script src="js/learn.js"></script>
+</body>
+</html>

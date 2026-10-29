@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — SIGNAL</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-admin">
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">SIGNAL<span class="dot"></span></a>
+  <div class="topbar-right">
+    <button class="btn btn-ghost" id="tableBtn" type="button">A–Z Codes</button>
+    <span class="brand-meta">Staff controls</span>
+  </div>
+</header>
+
+<main class="admin-main">
+  <h1 class="mono" style="font-size:28px;margin-bottom:8px">Admin</h1>
+  <p class="fineprint" style="margin-bottom:32px">Changes apply to new sessions. No data leaves this device.</p>
+
+  <div class="admin-row">
+    <label for="phraseCount">Phrases per session</label>
+    <input id="phraseCount" type="number" min="4" max="5" step="1">
+  </div>
+  <p class="admin-help">4 or 5 phrases. Progression is short → medium → long, repeating if more than 3. Each session uses fresh words.</p>
+
+  <div class="admin-row">
+    <label for="tier">Difficulty</label>
+    <select id="tier">
+      <option value="mixed">Mixed (recommended — short → medium → long)</option>
+      <option value="1">Tier 1 only — short terms</option>
+      <option value="2">Tier 2 only — medium terms</option>
+      <option value="3">Tier 3 only — long terms</option>
+    </select>
+  </div>
+  <div class="admin-row">
+    <label for="mode">Game mode</label>
+    <select id="mode">
+      <option value="classic">Classic — drag tiles into slots</option>
+      <option value="draw">Lucky draw — flip cards, find the code</option>
+    </select>
+  </div>
+  <p class="admin-help">Lucky draw shows the sentence and the binary codes to find. Students flip face-down cards until the sentence fills.</p>
+
+  <div class="admin-row">
+    <label for="decoys">Add decoy tiles (Tier 2+, classic mode)</label>
+    <input id="decoys" type="checkbox">
+  </div>
+  <div class="admin-row">
+    <label for="sound">Sound (reserved)</label>
+    <input id="sound" type="checkbox">
+  </div>
+
+  <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+    <button class="btn btn-primary" id="reset" type="button">Reset for next visitor</button>
+    <button class="btn btn-secondary" id="export" type="button">Export results CSV</button>
+    <button class="btn btn-ghost" id="clear" type="button">Clear results</button>
+  </div>
+
+  <p class="fineprint" style="margin-top:24px">SIGNAL v1.4 · offline kiosk · 5-bit classroom code</p>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rain.js"></script>
+<script src="js/conversion.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

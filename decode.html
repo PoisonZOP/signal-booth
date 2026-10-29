@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decode — SIGNAL</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-decode">
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">SIGNAL<span class="dot"></span></a>
+  <div class="topbar-right">
+    <button class="btn btn-ghost" id="tableBtn" type="button">A–Z Codes</button>
+    <span class="brand-meta">02 — Decode</span>
+  </div>
+</header>
+
+<main class="decode-main">
+  <div class="page-head" style="margin-bottom:24px">
+    <a class="btn btn-ghost" href="learn.html">← Back</a>
+    <span class="step">Step 2 / 3</span>
+  </div>
+
+  <p class="eyebrow">What number is this?</p>
+  <p class="qbits" id="qBits">0101</p>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <div class="options" id="options"></div>
+  <p class="explain" id="explain" aria-live="polite"></p>
+
+  <div style="margin-top:32px">
+    <button class="btn btn-ghost" id="skip" type="button">Skip to game →</button>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rain.js"></script>
+<script src="js/conversion.js"></script>
+<script src="js/idle.js"></script>
+<script src="js/decode.js"></script>
+</body>
+</html>
