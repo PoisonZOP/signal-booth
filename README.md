@@ -1,5 +1,3 @@
-
-
 # SIGNAL — Decode the Future
 
 An interactive kiosk web app for Open House 2026 (DPU · Information Systems). 
@@ -50,18 +48,3 @@ Signal-Booth/
 │   ├── result.js       # Final score logic
 │   └── admin.js        # Admin panel logic
 └── assets/             # Optional fonts/icons
-
-How to Run Locally (Staff)
-
-You have two options to run the game on the booth laptop/tablet:
-
-Option 1: Direct File (Simplest)
-Just double-click index.html. Because this version uses sessionStorage, the game will properly track your score to the result page even without a local server.
-
-Option 2: Local Server (Recommended)
-If you have Python installed, open your terminal/command prompt and run:
-bash
-
-python -m http.server 8000
-
-Then open Chrome and go to http://localhost:8000.
